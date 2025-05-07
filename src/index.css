@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 15, 23, 42;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(243, 244, 246);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: rgb(31, 41, 55);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(37, 99, 235);
+  border-radius: 9999px;
+}
+
+/* Custom styles */
+@layer components {
+  .section {
+    @apply min-h-screen py-20 px-4;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      @apply py-20 px-8;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      @apply py-20 px-16;
+    }
+  }
+  @media (min-width: 1280px) {
+    .section {
+      @apply py-20 px-32;
+    }
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .btn {
+    @apply inline-block px-6 py-3 rounded-md font-medium transition-all duration-300;
+  }
+
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-12 text-center relative inline-block;
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      @apply text-6xl leading-none;
+    }
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/3 h-1 bg-blue-600 rounded-full transform translate-x-full;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .project-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105;
+  }
+
+  .skill-pill {
+    @apply inline-block px-3 py-1 text-sm rounded-full m-1 bg-gray-100 dark:bg-gray-700;
+  }
+
+  .typing-text {
+    @apply border-r-2 border-current;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor; }
+  }
+
+  .dark .sun {
+    @apply hidden;
+  }
+
+  .dark .moon {
+    @apply block;
+  }
+
+  .moon {
+    @apply hidden;
+  }
+
+  .sun {
+    @apply block;
+  }
+}
