@@ -83,7 +83,7 @@ body {
 
 
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply bg-amber-600 text-white hover:bg-amber-700;
   }
 
   .section-title {
@@ -98,7 +98,7 @@ body {
 
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/3 h-1 bg-blue-600 rounded-full transform translate-x-full;
+    @apply absolute bottom-0 left-0 w-1/3 h-1 bg-amber-600 rounded-full transform translate-x-full;
   }
 
   .animate-float {

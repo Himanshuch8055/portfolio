@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { FiMoon, FiSun, FiMenu, FiX } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { GiPoolTriangle } from "react-icons/gi";
 import gsap from 'gsap';
 import { useLayoutEffect } from 'react';
 
@@ -87,11 +88,12 @@ const Header = () => {
         {/* Logo */}
         <a 
           href="#" 
-          className="text-2xl font-bold text-blue-600 dark:text-blue-400 relative overflow-hidden inline-block h-9"
+          className="text-2xl font-bold text-amber-600 dark:text-amber-400 relative overflow-hidden inline-block h-9"
           onMouseEnter={handleNameHover}
           onMouseLeave={handleNameLeave}
         >
-          <span ref={nameRef}>HC.</span>
+          {/* <span ref={nameRef}>HC.</span> */}
+          <GiPoolTriangle />
         </a>
 
         {/* Desktop Navigation */}
@@ -100,7 +102,7 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
             >
               {link.name}
             </a>
@@ -142,7 +144,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
@@ -155,7 +157,7 @@ const Header = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 >
                   {social.icon}
                 </a>

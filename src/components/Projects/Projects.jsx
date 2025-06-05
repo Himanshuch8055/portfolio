@@ -64,7 +64,7 @@ const Projects = () => {
           className="mb-16"
         >
           <h2 className="section-title">
-            <span className="text-blue-600 dark:text-blue-400">03.</span> Some Things I've Built
+            <span className="text-amber-600 dark:text-amber-400">03.</span> Some Things I've Built
           </h2>
         </motion.div>
 
@@ -105,7 +105,7 @@ const Projects = () => {
                   index % 2 === 0 ? 'md:order-2 md:items-end' : 'md:order-1 md:items-start'
                 }`}
               >
-                <p className="text-blue-600 dark:text-blue-400 font-mono text-sm">Featured Project</p>
+                <p className="text-amber-600 dark:text-amber-400 font-mono text-sm">Featured Project</p>
                 <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
@@ -122,7 +122,7 @@ const Projects = () => {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 font-medium rounded-full shadow-sm"
+                      className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 font-medium rounded-full shadow-sm"
                     >
                       {tech}
                     </span>
@@ -137,7 +137,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                     aria-label="GitHub"
                   >
                     <FiGithub size={22} />
@@ -146,7 +146,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                     aria-label="Live Preview"
                   >
                     <FiExternalLink size={22} />
@@ -159,7 +159,7 @@ const Projects = () => {
 
         {/* See More Projects */}
         <motion.div>
-          <a href="/projects" className="text-blue-600 dark:text-blue-400 font-mono text-sm mt-12 inline-flex items-center group">
+          <a href="/projects" className="text-amber-600 dark:text-amber-400 font-mono text-sm mt-12 inline-flex items-center group">
             See More Projects
             <FaArrowRightLong className="ml-2 group-hover:translate-x-1 transition-transform" />
           </a>

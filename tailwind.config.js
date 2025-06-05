@@ -16,12 +16,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563eb',
-          dark: '#1d4ed8',
+          DEFAULT: '#f59e0b', // amber-500
+          dark: '#d97706',    // amber-600
         },
-        secondary: '#1e40af',
+        secondary: '#b45309', // amber-700
         dark: '#0f172a',
-        light: '#f8fafc',
+        light: '#fefce8', // amber-50
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

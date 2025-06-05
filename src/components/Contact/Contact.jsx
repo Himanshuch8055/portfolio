@@ -54,7 +54,7 @@ const Contact = () => {
           className="mb-16"
         >
           <h2 className="section-title">
-            <span className="text-blue-600 dark:text-blue-400">04.</span> What's Next?
+            <span className="text-amber-600 dark:text-amber-400">04.</span> What's Next?
           </h2>
         </motion.div>
 
@@ -113,7 +113,7 @@ const Contact = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-2xl text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 aria-label={label}
               >
                 {icon}

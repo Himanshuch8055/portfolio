@@ -7,7 +7,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-light dark:bg-dark transition-colors duration-300 flex flex-col items-center justify-center p-6 text-center">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-primary-50 dark:from-gray-900 dark:to-dark">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-primary-50 dark:from-gray-900 dark:to-dark">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-primary-100/30 dark:to-primary-900/10"></div>
         </div>
       </div>

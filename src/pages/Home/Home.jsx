@@ -31,7 +31,7 @@ const Home = () => {
     <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-purple-100/30 dark:to-purple-900/10 animate-pulse"></div>
         </div>
       </div>

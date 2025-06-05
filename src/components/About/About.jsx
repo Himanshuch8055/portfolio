@@ -43,7 +43,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="section-title text-center mb-12">
-            <span className="text-blue-600 dark:text-blue-400">01.</span> About Me
+            <span className="text-amber-600 dark:text-amber-400">01.</span> About Me
           </h2>
 
           <div className="flex flex-col lg:flex-row gap-12 items-start">

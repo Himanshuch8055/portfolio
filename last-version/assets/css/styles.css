@@ -13,7 +13,7 @@
 
 ::selection {
   background-color: var(--lightest-violet);
-  color: var(--blue);
+  color: var(--amber);
 }
 
 html {
@@ -47,17 +47,17 @@ html::-webkit-scrollbar-thumb:hover {
   --light-slate: #A8B2D1;
   --lightest-slate: #CCD6F6;
   --white: #FFFFFF;
-  --blue: #64DAFF;
+  --amber: #64DAFF;
 
   --violet-tint: rgba(23, 5, 40, 0.7);
   --violet-shadow: rgba(10, 3, 18, 0.7);
   --light-violet-alt: rgb(38, 10, 61);
-  --blue-alt: rgba(100, 218, 255, 0.6);
-  --blue-tint: rgba(100, 218, 255, 0.122);
-  --blue-tint-alt: rgba(100, 218, 255, 0.55);
+  --amber-alt: rgba(100, 218, 255, 0.6);
+  --amber-tint: rgba(100, 218, 255, 0.122);
+  --amber-tint-alt: rgba(100, 218, 255, 0.55);
 
-  --paths-theme: var(--blue-tint) var(--blue);
-  --planets-theme: var(--blue-tint-alt) var(--blue-tint-alt) var(--blue-tint-alt) var(--blue);
+  --paths-theme: var(--amber-tint) var(--amber);
+  --planets-theme: var(--amber-tint-alt) var(--amber-tint-alt) var(--amber-tint-alt) var(--amber);
 
   --font-text: 'Work Sans', 'sans-serif';
   --font-head: 'Poppins', 'sans-serif';
@@ -231,7 +231,7 @@ body.light {
   --bg-secondary: #e6f1ff;
   --text-primary: #0a192f;
   --text-secondary: #112240;
-  --blue: #0077b6;
+  --amber: #0077b6;
   --lightest-violet: #e0f7fa;
   --slate: #333333;
   --light-slate: #555555;
@@ -241,7 +241,7 @@ body.light {
 }
 
 body.light ::selection {
-  background-color: var(--blue);
+  background-color: var(--amber);
   color: var(--bg-primary);
 }
 
@@ -265,7 +265,7 @@ body.light html::-webkit-scrollbar-thumb:hover {
 /* ========================== Typography ========================== */
 svg {
   fill: currentColor;
-  color: var(--blue);
+  color: var(--amber);
   vertical-align: middle;
 }
 
@@ -298,8 +298,8 @@ a {
 
 .btn {
   padding: 0.75em 1em;
-  color: var(--blue);
-  border: 1px solid var(--blue);
+  color: var(--amber);
+  border: 1px solid var(--amber);
   border-radius: var(--border-radius);
   font-family: var(--font-text);
   font-size: var(--fs-custom, var(--fs-sm));
@@ -386,7 +386,7 @@ a {
 }
 
 #logo:hover {
-  fill: var(--blue-tint);
+  fill: var(--amber-tint);
 }
 
 .ham {
@@ -413,7 +413,7 @@ a {
   inset: calc(100% + 0.5px) 0 0 0.25px;
   width: 100%;
   height: 1px;
-  background-color: var(--blue);
+  background-color: var(--amber);
   border-radius: var(--border-radius);
   transform: scaleX(0);
   transform-origin: right;
@@ -422,7 +422,7 @@ a {
 }
 
 .nav-list-item:hover {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 .nav-list-item:hover::after {
@@ -431,7 +431,7 @@ a {
 }
 
 .resume-btn:hover {
-  background-color: var(--blue-tint);
+  background-color: var(--amber-tint);
 }
 
 @media screen and (max-width: 768px) {
@@ -485,7 +485,7 @@ a {
     top: calc(50% + 1px);
     width: 0px;
     height: 1px;
-    background-color: var(--blue);
+    background-color: var(--amber);
     border-radius: var(--border-radius);
     transition: width 300ms ease-out;
     transform: none;
@@ -525,7 +525,7 @@ a {
     top: 50%;
     position: absolute;
     border-radius: var(--ham-radius);
-    background-color: var(--blue);
+    background-color: var(--amber);
     padding: 0.08rem;
   }
 
@@ -635,7 +635,7 @@ section {
 
 .social-items:hover>.icons path,
 .mail-box>a:hover {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 .social-items:hover,
@@ -672,7 +672,7 @@ section {
 
 .ht-intro {
   font-weight: 100;
-  color: var(--blue);
+  color: var(--amber);
   font-size: clamp(var(--fs-md), 2vw, var(--fs-xl));
   font-family: var(--font-text);
   margin-bottom: 1rem;
@@ -715,7 +715,7 @@ section {
 }
 
 .ht-btn:hover {
-  background-color: var(--blue-tint);
+  background-color: var(--amber-tint);
 }
 
 .ht-btn:hover .btn-arrow {
@@ -741,8 +741,8 @@ section {
   width: var(--sun-size);
   height: var(--sun-size);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue) 20%, var(--blue-tint) 100%);
-  filter: drop-shadow(0 0 2rem var(--blue-alt)) blur(1px);
+  background: linear-gradient(135deg, var(--amber) 20%, var(--amber-tint) 100%);
+  filter: drop-shadow(0 0 2rem var(--amber-alt)) blur(1px);
 }
 
 .planets {
@@ -797,7 +797,7 @@ section {
   width: 40%;
   height: 40%;
   border-radius: 50%;
-  background-color: var(--blue);
+  background-color: var(--amber);
 }
 
 .planets .earth::after {
@@ -860,13 +860,13 @@ section {
 
 @keyframes blinking-earth {
   0% {
-    background-color: var(--blue);
-    filter: drop-shadow(0 0 0.3rem var(--blue-alt)) blur(0.5px);
+    background-color: var(--amber);
+    filter: drop-shadow(0 0 0.3rem var(--amber-alt)) blur(0.5px);
   }
 
   100% {
     background-color: var(--violet);
-    filter: drop-shadow(0 0 0.3rem var(--blue-alt)) blur(0);
+    filter: drop-shadow(0 0 0.3rem var(--amber-alt)) blur(0);
   }
 }
 
@@ -1708,7 +1708,7 @@ section {
 
 .card:hover svg path,
 .card:hover p {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 @media screen and (max-width: 768px) {
@@ -1745,22 +1745,22 @@ section {
 /* Specific color for each skill logo on hover */
 /* Front-end Technologies */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(1) { color: #E34F26; } /* HTML5 - Orange */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(2) { color: #1572B6; } /* CSS3 - Blue */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(2) { color: #1572B6; } /* CSS3 - amber */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(3) { color: #F7DF1E; } /* JavaScript - Yellow */
 
 /* Programming Languages */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(4) { color: #00599C; } /* C++ - Dark Blue */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(4) { color: #00599C; } /* C++ - Dark amber */
 
 /* Version Control */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(5) { color: #4EAA25; } /* Git - Green */
 
 /* Databases */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(6) { color: #003B57; } /* SQL - Navy Blue */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(7) { color: #003B57; } /* SQLite - Navy Blue */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(6) { color: #003B57; } /* SQL - Navy amber */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(7) { color: #003B57; } /* SQLite - Navy amber */
 
 /* Frameworks and Libraries */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(8) { color: #06B6D4; } /* Tailwind CSS - Light Blue */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(9) { color: #61DAFB; } /* React - Light Blue */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(8) { color: #06B6D4; } /* Tailwind CSS - Light amber */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(9) { color: #61DAFB; } /* React - Light amber */
 
 /* Design Tools */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(10) { color: #000000; } /* Figma - Black */
@@ -1768,7 +1768,7 @@ section {
 /* Development Tools */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(11) { color: #F05032; } /* Git - Orange-Red */
 /* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(12) { color: #F24E1E; } /* Figma - Orange */
-/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(13) { color: #249ef0; } /* Visual Studio Code - Blue */
+/* .card:hover svg[viewBox="0 0 128 128"]:nth-of-type(13) { color: #249ef0; } /* Visual Studio Code - amber */
 
 /* =================== Experience =================== */
 .experience {
@@ -1805,7 +1805,7 @@ section {
 }
 
 .exp-company {
-  color: var(--blue);
+  color: var(--amber);
   font-size: var(--fs-lg);
   margin-bottom: 0.25rem;
   font-weight: 500;
@@ -1835,7 +1835,7 @@ section {
   content: '▹';
   position: absolute;
   left: -1.5rem;
-  color: var(--blue);
+  color: var(--amber);
 }
 
 body.light .exp-item {
@@ -1852,7 +1852,7 @@ body.light .exp-title {
 }
 
 body.light .exp-company {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 body.light .exp-date {
@@ -1864,7 +1864,7 @@ body.light .exp-responsibilities li {
 }
 
 body.light .exp-responsibilities li::before {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 @media screen and (max-width: 768px) {
@@ -2017,7 +2017,7 @@ body.light .exp-responsibilities li::before {
 
 .repo-link:hover svg,
 .live-link:hover svg {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 .wb-card-title > a {
@@ -2025,7 +2025,7 @@ body.light .exp-responsibilities li::before {
 }
 
 .wb-card-title > a:hover {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 body.light .wb-card {
@@ -2056,7 +2056,7 @@ body.light .live-link svg {
 
 body.light .repo-link:hover svg,
 body.light .live-link:hover svg {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 @media screen and (max-width: 1200px) {
@@ -2082,7 +2082,7 @@ body.light .live-link:hover svg {
 }
 
 .contact-head h1 {
-  color: var(--blue);
+  color: var(--amber);
   font-size: clamp(var(--fs-xl), 3vw, 24px);
 }
 
@@ -2104,7 +2104,7 @@ body.light .live-link:hover svg {
 }
 
 .contact-main a:hover {
-  background-color: var(--blue-tint);
+  background-color: var(--amber-tint);
 }
 
 /* ========================== Footer ========================== */
@@ -2135,7 +2135,7 @@ footer {
 }
 
 .author:hover {
-  color: var(--blue);
+  color: var(--amber);
 }
 
 @media screen and (max-width: 768px) {
@@ -2166,7 +2166,7 @@ footer {
   }
 
   .footer-social-items:hover svg path {
-    color: var(--blue);
+    color: var(--amber);
   }
 
   .author {

@@ -1,164 +1,123 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowRight, FiChevronDown } from 'react-icons/fi';
-import React, { useRef } from 'react';
-import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiGraphql } from 'react-icons/si';
+import { FaDatabase } from 'react-icons/fa';
 
 const Hero = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ['start end', 'end start']
-  });
-  
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
-  const socialLinks = [
-    { icon: <FiGithub />, href: 'https://github.com/himanshuch8055', label: 'GitHub' },
-    { icon: <FiLinkedin />, href: 'https://linkedin.com/in/himanshuch8055', label: 'LinkedIn' },
-    { icon: <FiTwitter />, href: 'https://twitter.com/himanshuch8055', label: 'Twitter' },
-    { icon: <FiMail />, href: 'mailto:himanshuch8055@gmail.com', label: 'Email' },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
+
+  const shapes = ['circle', 'square', 'triangle', 'star'];
 
   return (
-    <section ref={targetRef} className="relative flex items-center justify-center min-h-screen">
-      <div className="mx-auto px-6 relative z-10">
-        <motion.div
-          className="max-w-4xl mx-auto text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div 
-            drag
-            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-            className="inline-block px-4 py-2 mb-6 rounded-full bg-blue-100 dark:bg-blue-900/30 backdrop-blur-sm cursor-grab"
-            variants={itemVariants}
-          >
-            <p className="text-blue-600 dark:text-blue-400 font-mono text-sm md:text-base font-medium">
-              Hi, I'm Himanshu Chauhan 👋
-            </p>
-          </motion.div>
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden text-gray-900 dark:text-white">
+      {/* Animated background shapes */}
+      {Array.from({ length: 12 }).map((_, index) => {
+        const shape = shapes[index % shapes.length];
+        const size = Math.random() * 60 + 20;
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * 5;
 
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400"
-            variants={itemVariants}
-          >
-            Building Digital
-            <br />
-            <span className="text-gray-800 dark:text-gray-200">Experiences</span>
-          </motion.h1>
-
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mb-10 cursor-grab"
-            variants={itemVariants}
-          >
-              <motion.div 
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              >
-                <span className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-sm text-sm font-medium flex items-center gap-2">
-                  <FaReact className="text-blue-500" /> React
-                </span>
-              </motion.div>
-              <motion.div 
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              >
-                <span className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-sm text-sm font-medium flex items-center gap-2">
-                  <FaNodeJs className="text-green-500" /> Node.js
-                </span>
-              </motion.div>
-              <motion.div 
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              >
-                <span className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-sm text-sm font-medium flex items-center gap-2">
-                  <SiTypescript className="text-blue-600" /> TypeScript
-                </span>
-              </motion.div>
-              <motion.div 
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              >
-                <span className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-sm text-sm font-medium flex items-center gap-2">
-                  <SiGraphql className="text-blue-600" /> GraphQL
-                </span>
-              </motion.div>
-              <motion.div 
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-              >
-                <span className="px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-sm text-sm font-medium flex items-center gap-2">
-                  <FaDatabase className="text-blue-600" /> MongoDB
-                </span>
-              </motion.div>
-          </motion.div>
-
-          <motion.p
-            className="text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
-            variants={itemVariants}
-          >
-            I'm a Full-Stack Developer passionate about crafting exceptional digital experiences. With expertise in modern web technologies, I build scalable applications that solve real-world problems while delivering beautiful, intuitive user interfaces.
-          </motion.p>
-
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>
-            <a
-              href="#projects"
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-medium hover:opacity-90 transition-all hover:shadow-lg"
-            >
-              View My Work
-              <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium rounded-lg shadow hover:shadow-md transition-all duration-300 inline-flex items-center justify-center"
-            >
-              Get In Touch
-            </a>
-          </motion.div>
-
+        return (
           <motion.div
-            className="flex flex-wrap justify-center gap-6 mt-16"
-            variants={itemVariants}
+            key={index}
+            className="absolute"
+            style={{
+              width: size,
+              height: size,
+              borderRadius: shape === 'circle' ? '50%' : shape === 'square' ? '5%' : shape === 'triangle' ? '50%' : '50%',
+              background: `hsla(${Math.random() * 60 + (shape === 'star' ? 30 : 200)}, 70%, 60%, 0.1)`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              transform: shape === 'triangle' ? 'rotate(45deg)' : 'none',
+              opacity: 0.7
+            }}
+            animate={{
+              y: shape === 'triangle' ? [0, -20, 0] : [0, -30, 0],
+              x: shape === 'star' ? [0, 10, 0] : [0, 0, 0],
+              rotate: shape === 'star' ? [0, 360] : [0, 0],
+              scale: shape === 'circle' ? [1, 1.1, 1] : [1, 1, 1]
+            }}
+            transition={{
+              duration: duration,
+              repeat: Infinity,
+              repeatType: "reverse",
+              delay: delay,
+              ease: "easeInOut"
+            }}
+          />
+        );
+      })}
+
+      <div className="relative z-10 mx-auto px-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight"
+        >
+          Hi, I'm{' '}
+          <motion.span
+            className="antialiased italic font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 dark:from-amber-300 dark:to-amber-400"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            whileHover={{
+              background: "linear-gradient(to right, #FBBF24, #F59E0B, #D97706)",
+              textShadow: "0 0 8px rgba(245, 158, 11, 0.5)"
+            }}
           >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                drag
-                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
-                aria-label={social.label}
-              >
-                <span className="text-xl">{social.icon}</span>
-              </motion.a>
-            ))}
-          </motion.div>
+            Himanshu Chauhan
+          </motion.span>
+          ,<br />
+          Yet another{' '}
+          <motion.span
+            className="antialiased italic font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 dark:from-gray-300 dark:to-gray-500"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            whileHover={{
+              background: "linear-gradient(to right, #D1D5DB, #6B7280, #374151)",
+              textShadow: "0 0 8px rgba(107, 114, 128, 0.5)"
+            }}
+          >
+            frontend
+          </motion.span>{' '}
+          <br />
+          <motion.span
+            className="antialiased italic font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-800 dark:from-gray-400 dark:to-gray-600"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            whileHover={{
+              background: "linear-gradient(to right, #9CA3AF, #6B7280, #374151)",
+              textShadow: "0 0 8px rgba(75, 85, 99, 0.5)"
+            }}
+          >
+            developer.
+          </motion.span>
+        </motion.h1>
+
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-10 cursor-grab"
+          variants={itemVariants}
+        >
+          {[
+            { icon: <FaReact className="text-amber-500 dark:text-amber-400" />, text: "React" },
+            { icon: <FaNodeJs className="text-green-500 dark:text-green-400" />, text: "Node.js" },
+            { icon: <SiTypescript className="text-blue-500 dark:text-blue-400" />, text: "TypeScript" },
+            { icon: <SiGraphql className="text-pink-500 dark:text-pink-400" />, text: "GraphQL" },
+            { icon: <FaDatabase className="text-amber-500 dark:text-amber-400" />, text: "MongoDB" }
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              drag
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="px-4 py-2 rounded-full shadow-sm text-sm font-medium flex items-center gap-2 dark:bg-white/10 bg-gray-100 backdrop-blur-sm dark:border-white/20 border-gray-200">
+                {item.icon} {item.text}
+              </span>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

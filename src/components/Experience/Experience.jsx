@@ -56,13 +56,13 @@ const Experience = () => {
           className="mb-16"
         >
           <h2 className="section-title">
-            <span className="text-blue-600 dark:text-blue-400">02.</span> Work Experience
+            <span className="text-amber-600 dark:text-amber-400">02.</span> Work Experience
           </h2>
         </motion.div>
 
         <div className="relative w-full max-w-4xl mx-auto px-4">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500 dark:bg-blue-400 rounded-full z-0" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-amber-500 dark:bg-amber-400 rounded-full z-0" />
 
           <div className="space-y-12 relative z-10">
             {experiences.map((exp, idx) => {
@@ -81,7 +81,7 @@ const Experience = () => {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {exp.role}
                     </h3>
-                    <p className="text-sm text-blue-600 dark:text-blue-400 mb-1">
+                    <p className="text-sm text-amber-600 dark:text-amber-400 mb-1">
                       {exp.company}
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
